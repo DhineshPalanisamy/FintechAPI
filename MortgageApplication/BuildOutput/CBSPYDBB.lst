@@ -1,0 +1,936 @@
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612          Date 09/24/2019  Time 20:46:53   Page     1             
+0Invocation parameters:
+  NOCOMPILE,TEST,ADATA,EXIT(ADEXIT(FTTFDBKW))
+0Options in effect:
+    ADATA                                                                                                                            
+    QUOTE                                                                                                                            
+    ARITH(COMPAT)                                                                                                                    
+    BINARY(NATIVE)                                                                                                                   
+    CALLINT(SYSTEM,NODESCRIPTOR)                                                                                                     
+    CHAR(NATIVE)                                                                                                                     
+  NOCICS                                                                                                                             
+    COLLSEQ(BINARY)                                                                                                                  
+  NOCOMPILE                                                                                                                          
+  NOCOPYRIGHT                                                                                                                        
+  NOCURRENCY                                                                                                                         
+  NODIAGTRUNC                                                                                                                        
+    DIVIDE(NATIVE)                                                                                                                   
+  NODYNAM                                                                                                                            
+    ENTRYINT(SYSTEM)                                                                                                                 
+    EXIT(NOINEXIT,NOPRTEXIT,NOLIBEXIT,ADEXIT(FTTFDBKW),NOMSGEXIT)                                                                    
+    FLAG(I,I)                                                                                                                        
+  NOFLAGSTD                                                                                                                          
+    FLOAT(NATIVE)                                                                                                                    
+    LINECOUNT(60)                                                                                                                    
+  NOLIST                                                                                                                             
+    LSTFILE(LOCALE)                                                                                                                  
+  NOMAP                                                                                                                              
+  NOMDECK                                                                                                                            
+    NCOLLSEQ(BINARY)                                                                                                                 
+    NSYMBOL(NATIONAL)                                                                                                                
+  NONUMBER                                                                                                                           
+    OPTIMIZE(0)                                                                                                                      
+    PGMNAME(LONGUPPER)                                                                                                               
+    PROBE                                                                                                                            
+    QUALIFY(COMPAT)                                                                                                                  
+  NORULES                                                                                                                            
+  NOSERVICE                                                                                                                          
+    SEPOBJ                                                                                                                           
+    SEQUENCE                                                                                                                         
+  NOSOSI                                                                                                                             
+    SOURCE                                                                                                                           
+    SPACE(1)                                                                                                                         
+  NOSQL                                                                                                                              
+    SRCFORMAT(COMPAT)                                                                                                                
+  NOSSRANGE                                                                                                                          
+  NOSUPPRESS                                                                                                                         
+    TERM                                                                                                                             
+    TEST                                                                                                                             
+  NOTHREAD                                                                                                                           
+    TRUNC(STD)                                                                                                                       
+  NOVBREF                                                                                                                            
+  NOWSCLEAR                                                                                                                          
+    XREF(FULL)                                                                                                                       
+    ZWB                                                                                                                              
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612          Date 09/24/2019  Time 20:46:53   Page     2             
+0LineID  Message code  Library phase message text
+                                                                                                                                     
+     32  IGYLI0049-S   The "COPY" library "C:\Users\Administrator\git\Samples\MortgageApplication\BuildOutput\CSPYREQ" was not found.
+                       Skipped to the period terminating the "COPY" statement.                                                       
+                                                                                                                                     
+     34  IGYLI0049-S   The "COPY" library "C:\Users\Administrator\git\Samples\MortgageApplication\BuildOutput\CSPYRES" was not found.
+                       Skipped to the period terminating the "COPY" statement.                                                       
+-Messages    Total    Informational    Warning    Error    Severe    Terminating
+0Printed:       2                                              2            
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page     3             
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000001                IDENTIFICATION DIVISION.                                                 |                                  
+   000002                PROGRAM-ID. CBSCSPYT.                                                    |                                  
+   000003                ENVIRONMENT DIVISION.                                                    |                                  
+   000004                DATA DIVISION.                                                           |                                  
+   000005                WORKING-STORAGE SECTION.                                                 |                                  
+   000006                 01 WS-ERROR-CODE PIC 9(12).                                             |                                  
+   000007                 01 WS-ACCOUNT-NO-T PIC S9(18).                                          |                                  
+   000008                 01 WS-DEBIT-AMOUNT-T PIC S9(10)V9(2).                                   |                                  
+   000009                 01 WS-TIMESTAMP PIC X(26).                                              |                                  
+   000010                 01 WS-DATETIME PIC X(21).                                               |                                  
+   000011                 01 WS-TRANID PIC X(16).                                                 |                                  
+   000012                 01 WS-DATE PIC X(10).                                                   |                                  
+   000013                 01 WS-TIME PIC X(08).                                                   |                                  
+   000014                    EXEC SQL                                                             |                                  
+   000015                    INCLUDE CBSMST                                                       |                                  
+                                                                                                  |                                  
+ ==000015==> IGYDS0225-S An "EXEC SQL" statement was found, but the "SQL" compiler option was not |                                  
+                         in effect.  The statement was discarded.                                 |                                  
+                                                                                                  |                                  
+   000016                    END-EXEC.                                                            |                                  
+   000017                    EXEC SQL                                                             |                                  
+   000018                    INCLUDE CBSBAL                                                       |                                  
+                                                                                                  |                                  
+ ==000018==> IGYDS0225-S An "EXEC SQL" statement was found, but the "SQL" compiler option was not |                                  
+                         in effect.  The statement was discarded.                                 |                                  
+                                                                                                  |                                  
+   000019                    END-EXEC.                                                            |                                  
+   000020                    EXEC SQL                                                             |                                  
+   000021                    INCLUDE CBSHIS                                                       |                                  
+                                                                                                  |                                  
+ ==000021==> IGYDS0225-S An "EXEC SQL" statement was found, but the "SQL" compiler option was not |                                  
+                         in effect.  The statement was discarded.                                 |                                  
+                                                                                                  |                                  
+   000022                    END-EXEC.                                                            |                                  
+   000023                    EXEC SQL                                                             |                                  
+   000024                    INCLUDE SQLCA                                                        |                                  
+                                                                                                  |                                  
+ ==000024==> IGYDS0225-S An "EXEC SQL" statement was found, but the "SQL" compiler option was not |                                  
+                         in effect.  The statement was discarded.                                 |                                  
+                                                                                                  |                                  
+   000025                    END-EXEC.                                                            |                                  
+   000026               *     COPY AUTHREQ.                                                       |                                  
+   000027               *     COPY AUTHRES.                                                       |                                  
+   000028               * 77 MESSAGES PIC X(35).                                                  |                                  
+   000029                LINKAGE SECTION.                                                         |                                  
+   000030                01 DFHCOMMAREA.                                                          |                                  
+   000031                    02 CSPYREQ.                                                          |                                  
+                                                                                                  |                                  
+ ==000031==> IGYDS1159-E A "PICTURE" clause was not found for elementary item "CSPYREQ".  "PICTURE|                                  
+                         X(1)" was assumed.                                                       |                                  
+                                                                                                  |                                  
+   000032                    COPY CSPYREQ.                                                        |                                  
+   000033                    02 CSPYRES REDEFINES CSPYREQ.                                        |31                                
+                                                                                                  |                                  
+ ==000033==> IGYDS1159-E A "PICTURE" clause was not found for elementary item "CSPYRES".  "PICTURE|                                  
+                         X(1)" was assumed.                                                       |                                  
+                                                                                                  |                                  
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page     4             
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000034                    COPY CSPYRES.                                                        |                                  
+   000035                PROCEDURE DIVISION.                                                      |                                  
+   000036               *     MOVE LOW-VALUES TO DCLCBS-ACCT-MSTR-DTFGL.                          |                                  
+   000037                    MOVE FUNCTION CURRENT-DATE TO WS-DATETIME.                           |IFN 10                            
+   000038                    DISPLAY WS-DATETIME.                                                 |10                                
+   000039                    MOVE WS-DATETIME(1:16) TO WS-TRANID.                                 |10 11                             
+   000040                    DISPLAY "TRANSACTION-ID:" WS-TRANID.                                 |11                                
+   000041                    DISPLAY "BEGIN".                                                     |                                  
+   000042                    DISPLAY "ACCOUNT-NO" ACCOUNT-NO.                                     |UND                               
+                                                                                                  |                                  
+ ==000042==> IGYPS2121-S "ACCOUNT-NO" was not defined as a data-name.  The statement was          |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000043                    DISPLAY "DEBIT-AMOUNT" DEBIT-AMOUNT.                                 |UND                               
+                                                                                                  |                                  
+ ==000043==> IGYPS2121-S "DEBIT-AMOUNT" was not defined as a data-name.  The statement was        |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000044                    MOVE ACCOUNT-NO TO WS-ACCOUNT-NO-T.                                  |UND 7                             
+                                                                                                  |                                  
+ ==000044==> IGYPS2121-S "ACCOUNT-NO" was not defined as a data-name.  The statement was          |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000045                    COMPUTE WS-DEBIT-AMOUNT-T = DEBIT-AMOUNT.                            |8 UND                             
+                                                                                                  |                                  
+ ==000045==> IGYPS2121-S "DEBIT-AMOUNT" was not defined as a data-name.  The statement was        |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000046                    DISPLAY "WS-ACCOUNT-NO-T" WS-ACCOUNT-NO-T.                           |7                                 
+   000047                    MOVE SPACE TO CUSTOMER-NAME.                                         |IMP UND                           
+                                                                                                  |                                  
+ ==000047==> IGYPS2121-S "CUSTOMER-NAME" was not defined as a data-name.  The statement was       |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000048                    MOVE SPACE TO SYS-DATE.                                              |IMP UND                           
+                                                                                                  |                                  
+ ==000048==> IGYPS2121-S "SYS-DATE" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000049                    MOVE SPACE TO SYS-TIME.                                              |IMP UND                           
+                                                                                                  |                                  
+ ==000049==> IGYPS2121-S "SYS-TIME" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000050                    DISPLAY 'BEFORE MOVE'.                                               |                                  
+   000051                    COMPUTE CUSTOMER-ID = 0.                                             |UND                               
+                                                                                                  |                                  
+ ==000051==> IGYPS2121-S "CUSTOMER-ID" was not defined as a data-name.  The statement was         |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000052                    DISPLAY 'AFTER MOVE'.                                                |                                  
+   000053                    MOVE 0 TO AVAILABLE-BALANCE.                                         |UND                               
+                                                                                                  |                                  
+ ==000053==> IGYPS2121-S "AVAILABLE-BALANCE" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000054                    MOVE 0 TO HOLD-BALANCE.                                              |UND                               
+                                                                                                  |                                  
+ ==000054==> IGYPS2121-S "HOLD-BALANCE" was not defined as a data-name.  The statement was        |                                  
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page     5             
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0                        discarded.                                                               |                                  
+                                                                                                  |                                  
+   000055                    MOVE 0 TO LEDGER-BL.                                                 |UND                               
+                                                                                                  |                                  
+ ==000055==> IGYPS2121-S "LEDGER-BL" was not defined as a data-name.  The statement was discarded.|                                  
+                                                                                                  |                                  
+   000056                                                                                         |                                  
+   000057                    PERFORM 1000-VALIDATION-PARA THRU 1000-VALIDATION-PARA-EXIT.         |62 75                             
+   000058                    PERFORM 2000-DATA-ACCES-PARA THRU 2000-DATA-ACCES-PARA-EXIT.         |78 136                            
+   000059                    PERFORM 5000-BUSINES-VAL-PRA THRU 5000-BUSINES-VAL-PRA-EXIT.         |139 155                           
+   000060                    PERFORM 9000-MAIN-PARA THRU 9000-MAIN-PARA-EXIT.                     |159 222                           
+   000061                                                                                         |                                  
+   000062                 1000-VALIDATION-PARA.                                                   |                                  
+   000063                    DISPLAY 'VALIDATIONPARA'                                             |                                  
+   000064                    IF WS-ACCOUNT-NO-T = 0 THEN                                          |7                                 
+   000065      1                MOVE "ACCOUNT NUMBER SHOULD NOT BE NULL" TO MESSAGES              |UND                               
+                                                                                                  |                                  
+ ==000065==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000066      1                EXEC CICS RETURN END-EXEC                                         |                                  
+                                                                                                  |                                  
+ ==000066==> IGYPS0228-S An "EXEC CICS" statement was found, but the "CICS" compiler option was   |                                  
+                         not in effect.  The statement was discarded.                             |                                  
+                                                                                                  |                                  
+   000067                    END-IF.                                                              |                                  
+   000068                    DISPLAY 'VALIDATED ACCOUNT NUMBER'                                   |                                  
+   000069                    IF WS-DEBIT-AMOUNT-T = 0 THEN                                        |8                                 
+   000070      1             DISPLAY 'VALIDATING DEBIT-AMOUNT'                                    |                                  
+   000071      1                MOVE "DEBIT AMOUNT SHOULD NOT BE NULL" TO MESSAGES                |UND                               
+                                                                                                  |                                  
+ ==000071==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000072      1                EXEC CICS RETURN END-EXEC                                         |                                  
+                                                                                                  |                                  
+ ==000072==> IGYPS0228-S An "EXEC CICS" statement was found, but the "CICS" compiler option was   |                                  
+                         not in effect.  The statement was discarded.                             |                                  
+                                                                                                  |                                  
+   000073                    END-IF.                                                              |                                  
+   000074                    DISPLAY "MESSAGES:" MESSAGES.                                        |UND                               
+                                                                                                  |                                  
+ ==000074==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000075                 1000-VALIDATION-PARA-EXIT.                                              |                                  
+   000076                     EXIT.                                                               |                                  
+   000077                                                                                         |                                  
+   000078                 2000-DATA-ACCES-PARA.                                                   |                                  
+   000079                    COMPUTE H1-ACCOUNT-NUMBER = WS-ACCOUNT-NO-T.                         |UND 7                             
+                                                                                                  |                                  
+ ==000079==> IGYPS2121-S "H1-ACCOUNT-NUMBER" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000080                    EXEC SQL                                                             |                                  
+   000081                     SELECT * INTO :DCLCBS-ACCT-MSTR-DTL FROM CBS_ACCT_MSTR_DTL          |UND                               
+                                                                                                  |                                  
+ ==000081==> IGYPS0225-S An "EXEC SQL" statement was found, but the "SQL" compiler option was not |                                  
+                         in effect.  The statement was discarded.                                 |                                  
+                                                                                                  |                                  
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page     6             
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0==000081==> IGYPS2121-S "DCLCBS-ACCT-MSTR-DTL" was not defined as a data-name.  The statement was|                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000082                     WHERE ACCOUNT_NUMBER= :H1-ACCOUNT-NUMBER                            |UND                               
+                                                                                                  |                                  
+ ==000082==> IGYPS2121-S "H1-ACCOUNT-NUMBER" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000083                     END-EXEC.                                                           |                                  
+   000084                                                                                         |                                  
+   000085                     DISPLAY "SQLCODE:" SQLCODE                                          |UND                               
+                                                                                                  |                                  
+ ==000085==> IGYPS2121-S "SQLCODE" was not defined as a data-name.  The statement was discarded.  |                                  
+                                                                                                  |                                  
+   000086                                                                                         |                                  
+   000087                     EVALUATE SQLCODE                                                    |UND                               
+                                                                                                  |                                  
+ ==000087==> IGYPS2121-S "SQLCODE" was not defined as a data-name.  The statement was discarded.  |                                  
+                                                                                                  |                                  
+   000088                       WHEN 0                                                            |                                  
+   000089      1                 DISPLAY H1-ACCOUNT-NUMBER                                        |UND                               
+                                                                                                  |                                  
+ ==000089==> IGYPS2121-S "H1-ACCOUNT-NUMBER" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000090      1                 DISPLAY H1-PAYMENT-LIMIT                                         |UND                               
+                                                                                                  |                                  
+ ==000090==> IGYPS2121-S "H1-PAYMENT-LIMIT" was not defined as a data-name.  The statement was    |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000091      1                 DISPLAY H1-ACCOUNT-STATUS                                        |UND                               
+                                                                                                  |                                  
+ ==000091==> IGYPS2121-S "H1-ACCOUNT-STATUS" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000092      1                 DISPLAY H1-CUSTOMER-ID                                           |UND                               
+                                                                                                  |                                  
+ ==000092==> IGYPS2121-S "H1-CUSTOMER-ID" was not defined as a data-name.  The statement was      |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000093      1                 MOVE H1-ACCOUNT-NAME TO CUSTOMER-NAME                            |UND UND                           
+                                                                                                  |                                  
+ ==000093==> IGYPS2121-S "H1-ACCOUNT-NAME" was not defined as a data-name.  The statement was     |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+ ==000093==> IGYPS2121-S "CUSTOMER-NAME" was not defined as a data-name.  The statement was       |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000094      1                 COMPUTE CUSTOMER-ID = H1-CUSTOMER-ID                             |UND UND                           
+                                                                                                  |                                  
+ ==000094==> IGYPS2121-S "CUSTOMER-ID" was not defined as a data-name.  The statement was         |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+ ==000094==> IGYPS2121-S "H1-CUSTOMER-ID" was not defined as a data-name.  The statement was      |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000095                       WHEN 100                                                          |                                  
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page     7             
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000096      1                 MOVE "ACCT NO NOT REGISTERED WITH BANK" TO MESSAGES              |UND                               
+                                                                                                  |                                  
+ ==000096==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000097      1                 DISPLAY "MESSAGES" MESSAGES                                      |UND                               
+                                                                                                  |                                  
+ ==000097==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000098      1                 EXEC CICS RETURN END-EXEC                                        |                                  
+                                                                                                  |                                  
+ ==000098==> IGYPS0228-S An "EXEC CICS" statement was found, but the "CICS" compiler option was   |                                  
+                         not in effect.  The statement was discarded.                             |                                  
+                                                                                                  |                                  
+   000099                       WHEN OTHER                                                        |                                  
+   000100      1                 DISPLAY "SQLCODE1:" SQLCODE                                      |UND                               
+                                                                                                  |                                  
+ ==000100==> IGYPS2121-S "SQLCODE" was not defined as a data-name.  The statement was discarded.  |                                  
+                                                                                                  |                                  
+   000101      1                 MOVE "SQL ERROR1" TO MESSAGES                                    |UND                               
+                                                                                                  |                                  
+ ==000101==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000102      1                 DISPLAY "MESSAGES1:" MESSAGES                                    |UND                               
+                                                                                                  |                                  
+ ==000102==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000103      1                 EXEC CICS RETURN END-EXEC                                        |                                  
+                                                                                                  |                                  
+ ==000103==> IGYPS0228-S An "EXEC CICS" statement was found, but the "CICS" compiler option was   |                                  
+                         not in effect.  The statement was discarded.                             |                                  
+                                                                                                  |                                  
+   000104                     END-EVALUATE.                                                       |                                  
+   000105                                                                                         |                                  
+   000106                                                                                         |                                  
+   000107                                                                                         |                                  
+   000108                     EXEC SQL                                                            |                                  
+   000109                     SELECT * INTO :DCLCBS-ACCT-BAL-DTL                                  |UND                               
+                                                                                                  |                                  
+ ==000109==> IGYPS0225-S An "EXEC SQL" statement was found, but the "SQL" compiler option was not |                                  
+                         in effect.  The statement was discarded.                                 |                                  
+                                                                                                  |                                  
+ ==000109==> IGYPS2121-S "DCLCBS-ACCT-BAL-DTL" was not defined as a data-name.  The statement was |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000110                     FROM CBS_ACCT_BAL_DTL                                               |                                  
+   000111                     WHERE CUSTOMER_ID= :H1-CUSTOMER-ID                                  |UND                               
+                                                                                                  |                                  
+ ==000111==> IGYPS2121-S "H1-CUSTOMER-ID" was not defined as a data-name.  The statement was      |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000112                     END-EXEC.                                                           |                                  
+   000113                                                                                         |                                  
+   000114                     DISPLAY "SQLCODE:" SQLCODE                                          |UND                               
+                                                                                                  |                                  
+ ==000114==> IGYPS2121-S "SQLCODE" was not defined as a data-name.  The statement was discarded.  |                                  
+                                                                                                  |                                  
+   000115                                                                                         |                                  
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page     8             
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000116                     EVALUATE SQLCODE                                                    |UND                               
+                                                                                                  |                                  
+ ==000116==> IGYPS2121-S "SQLCODE" was not defined as a data-name.  The statement was discarded.  |                                  
+                                                                                                  |                                  
+   000117                       WHEN 0                                                            |                                  
+   000118      1                 DISPLAY H2-CUSTOMER-ID                                           |UND                               
+                                                                                                  |                                  
+ ==000118==> IGYPS2121-S "H2-CUSTOMER-ID" was not defined as a data-name.  The statement was      |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000119      1                 DISPLAY H2-DEBIT-AMOUNT                                          |UND                               
+                                                                                                  |                                  
+ ==000119==> IGYPS2121-S "H2-DEBIT-AMOUNT" was not defined as a data-name.  The statement was     |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000120      1                 DISPLAY H2-AVAILABLE-BALANCE                                     |UND                               
+                                                                                                  |                                  
+ ==000120==> IGYPS2121-S "H2-AVAILABLE-BALANCE" was not defined as a data-name.  The statement was|                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000121      1                 DISPLAY H2-LEDGER-BALANCE                                        |UND                               
+                                                                                                  |                                  
+ ==000121==> IGYPS2121-S "H2-LEDGER-BALANCE" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000122      1                 DISPLAY H2-HOLD-BALANCE                                          |UND                               
+                                                                                                  |                                  
+ ==000122==> IGYPS2121-S "H2-HOLD-BALANCE" was not defined as a data-name.  The statement was     |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000123               *         MOVE H2-AVAILABLE-BALANCE TO WS-AVAILABLE-BALANCE               |                                  
+   000124               *         MOVE H2-LEDGER-BALANCE TO WS-LEDGER-BL                          |                                  
+   000125               *         MOVE H2-HOLD-BALANCE TO WS-HOLD-BALANCE                         |                                  
+   000126                       WHEN 100                                                          |                                  
+   000127      1                 MOVE "CUSTOMER ID MISMATCHING" TO MESSAGES                       |UND                               
+                                                                                                  |                                  
+ ==000127==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000128      1                 DISPLAY "MESSAGES" MESSAGES                                      |UND                               
+                                                                                                  |                                  
+ ==000128==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000129      1                 EXEC CICS RETURN END-EXEC                                        |                                  
+                                                                                                  |                                  
+ ==000129==> IGYPS0228-S An "EXEC CICS" statement was found, but the "CICS" compiler option was   |                                  
+                         not in effect.  The statement was discarded.                             |                                  
+                                                                                                  |                                  
+   000130                       WHEN OTHER                                                        |                                  
+   000131      1                 DISPLAY "SQLCODE2:" SQLCODE                                      |UND                               
+                                                                                                  |                                  
+ ==000131==> IGYPS2121-S "SQLCODE" was not defined as a data-name.  The statement was discarded.  |                                  
+                                                                                                  |                                  
+   000132      1                 MOVE "SQL ERROR2" TO MESSAGES                                    |UND                               
+                                                                                                  |                                  
+ ==000132==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000133      1                 DISPLAY "MESSAGES2:" MESSAGES                                    |UND                               
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page     9             
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0                                                                                                 |                                  
+ ==000133==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000134      1                 EXEC CICS RETURN END-EXEC                                        |                                  
+                                                                                                  |                                  
+ ==000134==> IGYPS0228-S An "EXEC CICS" statement was found, but the "CICS" compiler option was   |                                  
+                         not in effect.  The statement was discarded.                             |                                  
+                                                                                                  |                                  
+   000135                     END-EVALUATE.                                                       |                                  
+   000136                 2000-DATA-ACCES-PARA-EXIT.                                              |                                  
+   000137                      EXIT.                                                              |                                  
+   000138                                                                                         |                                  
+   000139                 5000-BUSINES-VAL-PRA.                                                   |                                  
+   000140                     IF H1-ACCOUNT-STATUS IS NOT EQUAL TO 'ACTIVE   ' THEN               |UND                               
+                                                                                                  |                                  
+ ==000140==> IGYPS2121-S "H1-ACCOUNT-STATUS" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000141      1                 MOVE 10 TO WS-ERROR-CODE                                         |6                                 
+   000142      1                 PERFORM 1000-ERROR-PARA THRU 1000-ERROR-PARA-EXIT                |225 237                           
+   000143                     END-IF.                                                             |                                  
+   000144                                                                                         |                                  
+   000145                     IF WS-DEBIT-AMOUNT-T IS GREATER THAN H1-PAYMENT-LIMIT THEN          |8 UND                             
+                                                                                                  |                                  
+ ==000145==> IGYPS2121-S "H1-PAYMENT-LIMIT" was not defined as a data-name.  The statement was    |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000146      1                 MOVE 20 TO WS-ERROR-CODE                                         |6                                 
+   000147      1                 PERFORM 1000-ERROR-PARA THRU 1000-ERROR-PARA-EXIT                |225 237                           
+   000148                     END-IF.                                                             |                                  
+   000149                                                                                         |                                  
+   000150                     IF WS-DEBIT-AMOUNT-T                                                |8                                 
+   000151                     IS GREATER THAN H2-AVAILABLE-BALANCE THEN                           |UND                               
+                                                                                                  |                                  
+ ==000151==> IGYPS2121-S "H2-AVAILABLE-BALANCE" was not defined as a data-name.  The statement was|                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000152      1                 MOVE 30 TO WS-ERROR-CODE                                         |6                                 
+   000153      1                 PERFORM 1000-ERROR-PARA THRU 1000-ERROR-PARA-EXIT                |225 237                           
+   000154                     END-IF.                                                             |                                  
+   000155                 5000-BUSINES-VAL-PRA-EXIT.                                              |                                  
+   000156                    EXIT.                                                                |                                  
+   000157                                                                                         |                                  
+   000158                                                                                         |                                  
+   000159                 9000-MAIN-PARA.                                                         |                                  
+   000160                    MOVE WS-ACCOUNT-NO-T TO H3-ACCOUNT-NUMBER.                           |7 UND                             
+                                                                                                  |                                  
+ ==000160==> IGYPS2121-S "H3-ACCOUNT-NUMBER" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000161                    MOVE WS-TRANID TO H3-TRANSACTION-ID.                                 |11 UND                            
+                                                                                                  |                                  
+ ==000161==> IGYPS2121-S "H3-TRANSACTION-ID" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000162                    COMPUTE H2-AVAILABLE-BALANCE =                                       |UND                               
+                                                                                                  |                                  
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page    10             
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0==000162==> IGYPS2121-S "H2-AVAILABLE-BALANCE" was not defined as a data-name.  The statement was|                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000163                    H2-AVAILABLE-BALANCE - WS-DEBIT-AMOUNT-T.                            |UND 8                             
+                                                                                                  |                                  
+ ==000163==> IGYPS2121-S "H2-AVAILABLE-BALANCE" was not defined as a data-name.  The statement was|                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000164               *     MOVE WS-AVAIL TO H2-AVAILABLE-BALANCE                               |                                  
+   000165                    COMPUTE H2-LEDGER-BALANCE =                                          |UND                               
+                                                                                                  |                                  
+ ==000165==> IGYPS2121-S "H2-LEDGER-BALANCE" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000166                    H2-HOLD-BALANCE + H2-AVAILABLE-BALANCE                               |UND UND                           
+                                                                                                  |                                  
+ ==000166==> IGYPS2121-S "H2-HOLD-BALANCE" was not defined as a data-name.  The statement was     |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+ ==000166==> IGYPS2121-S "H2-AVAILABLE-BALANCE" was not defined as a data-name.  The statement was|                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000167               *     MOVE WS-LEDGER-BL TO H2-LEDGER-BALANCE                              |                                  
+   000168                    COMPUTE H2-DEBIT-AMOUNT = WS-DEBIT-AMOUNT-T                          |UND 8                             
+                                                                                                  |                                  
+ ==000168==> IGYPS2121-S "H2-DEBIT-AMOUNT" was not defined as a data-name.  The statement was     |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000169                    EXEC SQL                                                             |                                  
+   000170                     UPDATE CBS_ACCT_BAL_DTL                                             |                                  
+                                                                                                  |                                  
+ ==000170==> IGYPS0225-S An "EXEC SQL" statement was found, but the "SQL" compiler option was not |                                  
+                         in effect.  The statement was discarded.                                 |                                  
+                                                                                                  |                                  
+   000171                       SET AVAILABLE_BALANCE = :H2-AVAILABLE-BALANCE,                    |UND                               
+                                                                                                  |                                  
+ ==000171==> IGYPS2121-S "H2-AVAILABLE-BALANCE" was not defined as a data-name.  The statement was|                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000172                       LEDGER_BALANCE = :H2-LEDGER-BALANCE,                              |UND                               
+                                                                                                  |                                  
+ ==000172==> IGYPS2121-S "H2-LEDGER-BALANCE" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000173                       DEBIT_AMOUNT = :H2-DEBIT-AMOUNT                                   |UND                               
+                                                                                                  |                                  
+ ==000173==> IGYPS2121-S "H2-DEBIT-AMOUNT" was not defined as a data-name.  The statement was     |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000174               *        UPD_TIMESTAMP =:WS-TIMESTAMP                                     |                                  
+   000175                       WHERE CUSTOMER_ID = :H2-CUSTOMER-ID                               |UND                               
+                                                                                                  |                                  
+ ==000175==> IGYPS2121-S "H2-CUSTOMER-ID" was not defined as a data-name.  The statement was      |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000176                    END-EXEC.                                                            |                                  
+   000177                     DISPLAY"SQLCODE" SQLCODE                                            |UND                               
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page    11             
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0                                                                                                 |                                  
+ ==000177==> IGYPS0001-W A blank was missing before character """ in column 20.  A blank was      |                                  
+                         assumed.                                                                 |                                  
+                                                                                                  |                                  
+ ==000177==> IGYPS2121-S "SQLCODE" was not defined as a data-name.  The statement was discarded.  |                                  
+                                                                                                  |                                  
+   000178                    EVALUATE SQLCODE                                                     |UND                               
+                                                                                                  |                                  
+ ==000178==> IGYPS2121-S "SQLCODE" was not defined as a data-name.  The statement was discarded.  |                                  
+                                                                                                  |                                  
+   000179                       WHEN 0                                                            |                                  
+   000180      1                  COMPUTE AVAILABLE-BALANCE = H2-AVAILABLE-BALANCE                |UND UND                           
+                                                                                                  |                                  
+ ==000180==> IGYPS2121-S "AVAILABLE-BALANCE" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+ ==000180==> IGYPS2121-S "H2-AVAILABLE-BALANCE" was not defined as a data-name.  The statement was|                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000181      1                  COMPUTE HOLD-BALANCE =H2-HOLD-BALANCE                           |UND UND                           
+                                                                                                  |                                  
+ ==000181==> IGYPS0001-W A blank was missing before character "H" in column 39.  A blank was      |                                  
+                         assumed.                                                                 |                                  
+                                                                                                  |                                  
+ ==000181==> IGYPS2121-S "HOLD-BALANCE" was not defined as a data-name.  The statement was        |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+ ==000181==> IGYPS2121-S "H2-HOLD-BALANCE" was not defined as a data-name.  The statement was     |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000182      1                  COMPUTE LEDGER-BL = H2-LEDGER-BALANCE                           |UND UND                           
+                                                                                                  |                                  
+ ==000182==> IGYPS2121-S "LEDGER-BL" was not defined as a data-name.  The statement was discarded.|                                  
+                                                                                                  |                                  
+ ==000182==> IGYPS2121-S "H2-LEDGER-BALANCE" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000183      1                  MOVE H3-TRANSACTION-ID TO TRANSACTION-ID                        |UND UND                           
+                                                                                                  |                                  
+ ==000183==> IGYPS2121-S "H3-TRANSACTION-ID" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+ ==000183==> IGYPS2121-S "TRANSACTION-ID" was not defined as a data-name.  The statement was      |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000184      1                  MOVE "AMOUNT DEBITED SUCCESSFULLY" TO MESSAGES                  |UND                               
+                                                                                                  |                                  
+ ==000184==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000185                       WHEN OTHER                                                        |                                  
+   000186      1                  MOVE "AMOUNT DEBIT UNSUCCESSFULL" TO MESSAGES                   |UND                               
+                                                                                                  |                                  
+ ==000186==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000187      1                  EXEC CICS RETURN END-EXEC                                       |                                  
+                                                                                                  |                                  
+ ==000187==> IGYPS0228-S An "EXEC CICS" statement was found, but the "CICS" compiler option was   |                                  
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page    12             
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0                        not in effect.  The statement was discarded.                             |                                  
+                                                                                                  |                                  
+   000188                    END-EVALUATE.                                                        |                                  
+   000189                                                                                         |                                  
+   000190                    EXEC SQL                                                             |                                  
+   000191                     INSERT INTO CBS_ACCT_TRAN_HSTRY_DTL                                 |                                  
+                                                                                                  |                                  
+ ==000191==> IGYPS0225-S An "EXEC SQL" statement was found, but the "SQL" compiler option was not |                                  
+                         in effect.  The statement was discarded.                                 |                                  
+                                                                                                  |                                  
+   000192                        VALUES (:H3-ACCOUNT-NUMBER, :H3-TRANSACTION-ID,                  |UND UND                           
+                                                                                                  |                                  
+ ==000192==> IGYPS2121-S "H3-ACCOUNT-NUMBER" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+ ==000192==> IGYPS2121-S "H3-TRANSACTION-ID" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000193                        :H2-DEBIT-AMOUNT,                                                |UND                               
+                                                                                                  |                                  
+ ==000193==> IGYPS2121-S "H2-DEBIT-AMOUNT" was not defined as a data-name.  The statement was     |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000194                        'DEBIT     ', 'SUCCESS   ')                                      |                                  
+   000195                    END-EXEC.                                                            |                                  
+   000196                     DISPLAY"SQLCODE1" SQLCODE                                           |UND                               
+                                                                                                  |                                  
+ ==000196==> IGYPS0001-W A blank was missing before character """ in column 20.  A blank was      |                                  
+                         assumed.                                                                 |                                  
+                                                                                                  |                                  
+ ==000196==> IGYPS2121-S "SQLCODE" was not defined as a data-name.  The statement was discarded.  |                                  
+                                                                                                  |                                  
+   000197                                                                                         |                                  
+   000198                    EVALUATE SQLCODE                                                     |UND                               
+                                                                                                  |                                  
+ ==000198==> IGYPS2121-S "SQLCODE" was not defined as a data-name.  The statement was discarded.  |                                  
+                                                                                                  |                                  
+   000199               *     DISPLAY SQLCODE                                                     |                                  
+   000200               *     DISPLAY"INSERT"                                                     |                                  
+   000201                       WHEN 0                                                            |                                  
+   000202      1                  EXEC SQL                                                        |                                  
+   000203      1              SELECT CURRENT TIME INTO :H1-ACCOUNT-STATUS FROM                    |UND                               
+                                                                                                  |                                  
+ ==000203==> IGYPS0225-S An "EXEC SQL" statement was found, but the "SQL" compiler option was not |                                  
+                         in effect.  The statement was discarded.                                 |                                  
+                                                                                                  |                                  
+ ==000203==> IGYPS2121-S "H1-ACCOUNT-STATUS" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000204      1              SYSIBM.SYSDUMMY1                                                    |                                  
+   000205      1              END-EXEC                                                            |                                  
+   000206      1              MOVE H1-ACCOUNT-STATUS TO SYS-TIME                                  |UND UND                           
+                                                                                                  |                                  
+ ==000206==> IGYPS2121-S "H1-ACCOUNT-STATUS" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+ ==000206==> IGYPS2121-S "SYS-TIME" was not defined as a data-name.  The statement was discarded. |                                  
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page    13             
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0                                                                                                 |                                  
+   000207      1              DISPLAY 'TIME'SYS-TIME                                              |UND                               
+                                                                                                  |                                  
+ ==000207==> IGYPS0001-W A blank was missing before character "S" in column 27.  A blank was      |                                  
+                         assumed.                                                                 |                                  
+                                                                                                  |                                  
+ ==000207==> IGYPS2121-S "SYS-TIME" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000208                                                                                         |                                  
+   000209      1              EXEC SQL                                                            |                                  
+   000210      1              SELECT CURRENT DATE INTO :H1-ACCOUNT-STATUS FROM                    |UND                               
+                                                                                                  |                                  
+ ==000210==> IGYPS0225-S An "EXEC SQL" statement was found, but the "SQL" compiler option was not |                                  
+                         in effect.  The statement was discarded.                                 |                                  
+                                                                                                  |                                  
+ ==000210==> IGYPS2121-S "H1-ACCOUNT-STATUS" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000211      1              SYSIBM.SYSDUMMY1                                                    |                                  
+   000212      1              END-EXEC                                                            |                                  
+   000213      1              MOVE H1-ACCOUNT-STATUS TO SYS-DATE                                  |UND UND                           
+                                                                                                  |                                  
+ ==000213==> IGYPS2121-S "H1-ACCOUNT-STATUS" was not defined as a data-name.  The statement was   |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+ ==000213==> IGYPS2121-S "SYS-DATE" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000214      1              DISPLAY 'DATE'SYS-DATE                                              |UND                               
+                                                                                                  |                                  
+ ==000214==> IGYPS0001-W A blank was missing before character "S" in column 27.  A blank was      |                                  
+                         assumed.                                                                 |                                  
+                                                                                                  |                                  
+ ==000214==> IGYPS2121-S "SYS-DATE" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000215      1              MOVE WS-DEBIT-AMOUNT-T TO DEBIT-AMOUNT-RES                          |8 UND                             
+                                                                                                  |                                  
+ ==000215==> IGYPS2121-S "DEBIT-AMOUNT-RES" was not defined as a data-name.  The statement was    |                                  
+                         discarded.                                                               |                                  
+                                                                                                  |                                  
+   000216      1                  MOVE "AMOUNT DEBITED SUCCESSFULLY" TO MESSAGES                  |UND                               
+                                                                                                  |                                  
+ ==000216==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000217      1                  EXEC CICS RETURN END-EXEC                                       |                                  
+                                                                                                  |                                  
+ ==000217==> IGYPS0228-S An "EXEC CICS" statement was found, but the "CICS" compiler option was   |                                  
+                         not in effect.  The statement was discarded.                             |                                  
+                                                                                                  |                                  
+   000218                       WHEN OTHER                                                        |                                  
+   000219      1                  MOVE "AMOUNT DEBIT UNSUCCESSFULL" TO MESSAGES                   |UND                               
+                                                                                                  |                                  
+ ==000219==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000220      1                  EXEC CICS RETURN END-EXEC                                       |                                  
+                                                                                                  |                                  
+ ==000220==> IGYPS0228-S An "EXEC CICS" statement was found, but the "CICS" compiler option was   |                                  
+                         not in effect.  The statement was discarded.                             |                                  
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page    14             
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0                                                                                                 |                                  
+   000221                    END-EVALUATE.                                                        |                                  
+   000222                 9000-MAIN-PARA-EXIT.                                                    |                                  
+   000223                    EXIT.                                                                |                                  
+   000224                                                                                         |                                  
+   000225                  1000-ERROR-PARA.                                                       |                                  
+   000226                    EVALUATE WS-ERROR-CODE                                               |6                                 
+   000227                     WHEN 10                                                             |                                  
+   000228      1               MOVE "CUSTOMER NOT REGISTERED WITH BANK" TO MESSAGES               |UND                               
+                                                                                                  |                                  
+ ==000228==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000229      1               EXEC CICS RETURN END-EXEC                                          |                                  
+                                                                                                  |                                  
+ ==000229==> IGYPS0228-S An "EXEC CICS" statement was found, but the "CICS" compiler option was   |                                  
+                         not in effect.  The statement was discarded.                             |                                  
+                                                                                                  |                                  
+   000230                     WHEN 20                                                             |                                  
+   000231      1               MOVE "AMOUNT IS GREATER THAN PAYMENT LMIT" TO MESSAGES             |UND                               
+                                                                                                  |                                  
+ ==000231==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000232      1               EXEC CICS RETURN END-EXEC                                          |                                  
+                                                                                                  |                                  
+ ==000232==> IGYPS0228-S An "EXEC CICS" statement was found, but the "CICS" compiler option was   |                                  
+                         not in effect.  The statement was discarded.                             |                                  
+                                                                                                  |                                  
+   000233                     WHEN 30                                                             |                                  
+   000234      1               MOVE "ACCOUNT DOESNT HAVE SUFFIECIENT FUND" TO MESSAGES            |UND                               
+                                                                                                  |                                  
+ ==000234==> IGYPS2121-S "MESSAGES" was not defined as a data-name.  The statement was discarded. |                                  
+                                                                                                  |                                  
+   000235      1               EXEC CICS RETURN END-EXEC                                          |                                  
+                                                                                                  |                                  
+ ==000235==> IGYPS0228-S An "EXEC CICS" statement was found, but the "CICS" compiler option was   |                                  
+                         not in effect.  The statement was discarded.                             |                                  
+                                                                                                  |                                  
+   000236                    END-EVALUATE.                                                        |                                  
+   000237                  1000-ERROR-PARA-EXIT.                                                  |                                  
+   000238                    EXIT.                                                                |                                  
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page    15             
+0An "M" preceding a data-name reference indicates that the data-name is modified by this reference.
+  
+  Defined   Cross-reference of data names   References                                                                               
+  
+       31   CSPYREQ. . . . . . . . . . . .  33                                                                                                                                                   
+       33   CSPYRES                                                                                                                                                                              
+       30   DFHCOMMAREA                                                                                                                                                                          
+        7   WS-ACCOUNT-NO-T. . . . . . . .  M44 46 64 79 160                                                                                                                                     
+       12   WS-DATE                                                                                                                                                                              
+       10   WS-DATETIME. . . . . . . . . .  M37 38 39                                                                                                                                            
+        8   WS-DEBIT-AMOUNT-T. . . . . . .  M45 69 145 150 163 168 215                                                                                                                           
+        6   WS-ERROR-CODE. . . . . . . . .  M141 M146 M152 226                                                                                                                                   
+       13   WS-TIME                                                                                                                                                                              
+        9   WS-TIMESTAMP                                                                                                                                                                         
+       11   WS-TRANID. . . . . . . . . . .  M39 40 161                                                                                                                                           
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page    16             
+0Context usage is indicated by the letter preceding a procedure-name reference.
+ These letters and their meanings are:
+     A = ALTER (procedure-name)
+     D = GO TO (procedure-name) DEPENDING ON
+     E = End of range of (PERFORM) through (procedure-name)
+     G = GO TO (procedure-name)
+     P = PERFORM (procedure-name)
+     T = (ALTER) TO PROCEED TO (procedure-name)
+     U = USE FOR DEBUGGING (procedure-name)
+  
+  Defined   Cross-reference of procedures   References                                                                               
+  
+      225   1000-ERROR-PARA. . . . . . . .  P142 P147 P153                                                                                                                                       
+      237   1000-ERROR-PARA-EXIT . . . . .  E142 E147 E153                                                                                                                                       
+       62   1000-VALIDATION-PARA . . . . .  P57                                                                                                                                                  
+       75   1000-VALIDATION-PARA-EXIT. . .  E57                                                                                                                                                  
+       78   2000-DATA-ACCES-PARA . . . . .  P58                                                                                                                                                  
+      136   2000-DATA-ACCES-PARA-EXIT. . .  E58                                                                                                                                                  
+      139   5000-BUSINES-VAL-PRA . . . . .  P59                                                                                                                                                  
+      155   5000-BUSINES-VAL-PRA-EXIT. . .  E59                                                                                                                                                  
+      159   9000-MAIN-PARA . . . . . . . .  P60                                                                                                                                                  
+      222   9000-MAIN-PARA-EXIT. . . . . .  E60                                                                                                                                                  
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page    17             
+0 Defined   Cross-reference of programs     References                                                                               
+  
+        2   CBSCSPYT                                                                                                                                                                             
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page    18             
+0LineID  Message code  Message text
+                                                                                                                                     
+         IGYSC0207-S   Severe message(s) were issued during library phase processing.  Refer to the beginning of the listing.        
+                                                                                                                                     
+     15  IGYDS0225-S   An "EXEC SQL" statement was found, but the "SQL" compiler option was not in effect.  The statement was        
+                       discarded.                                                                                                    
+                                                                                                                                     
+                       Same message on line:     18     21     24     81    109    170    191    203    210                          
+                                                                                                                                     
+     31  IGYDS1159-E   A "PICTURE" clause was not found for elementary item "CSPYREQ".  "PICTURE X(1)" was assumed.                  
+                                                                                                                                     
+     33  IGYDS1159-E   A "PICTURE" clause was not found for elementary item "CSPYRES".  "PICTURE X(1)" was assumed.                  
+                                                                                                                                     
+     42  IGYPS2121-S   "ACCOUNT-NO" was not defined as a data-name.  The statement was discarded.                                    
+                                                                                                                                     
+                       Same message on line:     44                                                                                  
+                                                                                                                                     
+     43  IGYPS2121-S   "DEBIT-AMOUNT" was not defined as a data-name.  The statement was discarded.                                  
+                                                                                                                                     
+                       Same message on line:     45                                                                                  
+                                                                                                                                     
+     47  IGYPS2121-S   "CUSTOMER-NAME" was not defined as a data-name.  The statement was discarded.                                 
+                                                                                                                                     
+                       Same message on line:     93                                                                                  
+                                                                                                                                     
+     48  IGYPS2121-S   "SYS-DATE" was not defined as a data-name.  The statement was discarded.                                      
+                                                                                                                                     
+                       Same message on line:    213    214                                                                           
+                                                                                                                                     
+     49  IGYPS2121-S   "SYS-TIME" was not defined as a data-name.  The statement was discarded.                                      
+                                                                                                                                     
+                       Same message on line:    206    207                                                                           
+                                                                                                                                     
+     51  IGYPS2121-S   "CUSTOMER-ID" was not defined as a data-name.  The statement was discarded.                                   
+                                                                                                                                     
+                       Same message on line:     94                                                                                  
+                                                                                                                                     
+     53  IGYPS2121-S   "AVAILABLE-BALANCE" was not defined as a data-name.  The statement was discarded.                             
+                                                                                                                                     
+                       Same message on line:    180                                                                                  
+                                                                                                                                     
+     54  IGYPS2121-S   "HOLD-BALANCE" was not defined as a data-name.  The statement was discarded.                                  
+                                                                                                                                     
+                       Same message on line:    181                                                                                  
+                                                                                                                                     
+     55  IGYPS2121-S   "LEDGER-BL" was not defined as a data-name.  The statement was discarded.                                     
+                                                                                                                                     
+                       Same message on line:    182                                                                                  
+                                                                                                                                     
+     65  IGYPS2121-S   "MESSAGES" was not defined as a data-name.  The statement was discarded.                                      
+                                                                                                                                     
+                       Same message on line:     71     74     96     97    101    102    127    128    132    133    184    186     
+                                                216    219    228    231    234                                                      
+                                                                                                                                     
+     66  IGYPS0228-S   An "EXEC CICS" statement was found, but the "CICS" compiler option was not in effect.  The statement was      
+                       discarded.                                                                                                    
+                                                                                                                                     
+                       Same message on line:     72     98    103    129    134    187    217    220    229    232    235            
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page    19             
+0                                                                                                                                    
+     79  IGYPS2121-S   "H1-ACCOUNT-NUMBER" was not defined as a data-name.  The statement was discarded.                             
+                                                                                                                                     
+                       Same message on line:     82     89                                                                           
+                                                                                                                                     
+     81  IGYPS2121-S   "DCLCBS-ACCT-MSTR-DTL" was not defined as a data-name.  The statement was discarded.                          
+                                                                                                                                     
+     85  IGYPS2121-S   "SQLCODE" was not defined as a data-name.  The statement was discarded.                                       
+                                                                                                                                     
+                       Same message on line:     87    100    114    116    131    177    178    196    198                          
+                                                                                                                                     
+     90  IGYPS2121-S   "H1-PAYMENT-LIMIT" was not defined as a data-name.  The statement was discarded.                              
+                                                                                                                                     
+                       Same message on line:    145                                                                                  
+                                                                                                                                     
+     91  IGYPS2121-S   "H1-ACCOUNT-STATUS" was not defined as a data-name.  The statement was discarded.                             
+                                                                                                                                     
+                       Same message on line:    140    203    206    210    213                                                      
+                                                                                                                                     
+     92  IGYPS2121-S   "H1-CUSTOMER-ID" was not defined as a data-name.  The statement was discarded.                                
+                                                                                                                                     
+                       Same message on line:     94    111                                                                           
+                                                                                                                                     
+     93  IGYPS2121-S   "H1-ACCOUNT-NAME" was not defined as a data-name.  The statement was discarded.                               
+                                                                                                                                     
+    109  IGYPS2121-S   "DCLCBS-ACCT-BAL-DTL" was not defined as a data-name.  The statement was discarded.                           
+                                                                                                                                     
+    118  IGYPS2121-S   "H2-CUSTOMER-ID" was not defined as a data-name.  The statement was discarded.                                
+                                                                                                                                     
+                       Same message on line:    175                                                                                  
+                                                                                                                                     
+    119  IGYPS2121-S   "H2-DEBIT-AMOUNT" was not defined as a data-name.  The statement was discarded.                               
+                                                                                                                                     
+                       Same message on line:    168    173    193                                                                    
+                                                                                                                                     
+    120  IGYPS2121-S   "H2-AVAILABLE-BALANCE" was not defined as a data-name.  The statement was discarded.                          
+                                                                                                                                     
+                       Same message on line:    151    162    163    166    171    180                                               
+                                                                                                                                     
+    121  IGYPS2121-S   "H2-LEDGER-BALANCE" was not defined as a data-name.  The statement was discarded.                             
+                                                                                                                                     
+                       Same message on line:    165    172    182                                                                    
+                                                                                                                                     
+    122  IGYPS2121-S   "H2-HOLD-BALANCE" was not defined as a data-name.  The statement was discarded.                               
+                                                                                                                                     
+                       Same message on line:    166    181                                                                           
+                                                                                                                                     
+    160  IGYPS2121-S   "H3-ACCOUNT-NUMBER" was not defined as a data-name.  The statement was discarded.                             
+                                                                                                                                     
+                       Same message on line:    192                                                                                  
+                                                                                                                                     
+    161  IGYPS2121-S   "H3-TRANSACTION-ID" was not defined as a data-name.  The statement was discarded.                             
+                                                                                                                                     
+                       Same message on line:    183    192                                                                           
+                                                                                                                                     
+    177  IGYPS0001-W   A blank was missing before character """ in column 20.  A blank was assumed.                                  
+                                                                                                                                     
+                       Same message on line:    196                                                                                  
+1PP 5724-L44 IBM COBOL for Windows                   8.0.0 S1612CBSCSPYT  Date 09/24/2019  Time 20:46:53   Page    20             
+0                                                                                                                                    
+    181  IGYPS0001-W   A blank was missing before character "H" in column 39.  A blank was assumed.                                  
+                                                                                                                                     
+    183  IGYPS2121-S   "TRANSACTION-ID" was not defined as a data-name.  The statement was discarded.                                
+                                                                                                                                     
+    207  IGYPS0001-W   A blank was missing before character "S" in column 27.  A blank was assumed.                                  
+                                                                                                                                     
+                       Same message on line:    214                                                                                  
+                                                                                                                                     
+    215  IGYPS2121-S   "DEBIT-AMOUNT-RES" was not defined as a data-name.  The statement was discarded.                              
+-Messages    Total    Informational    Warning    Error    Severe    Terminating
+0Printed:     122                          5         2       115            
+-* Statistics for COBOL program CBSCSPYT:
+ *    Source records = 238
+ *    Data Division statements = 11
+ *    Procedure Division statements = 115
+0Locale = en_US.IBM-437
+0End of compilation 1,  program CBSCSPYT,  highest severity: Severe.
+0Return code 12
