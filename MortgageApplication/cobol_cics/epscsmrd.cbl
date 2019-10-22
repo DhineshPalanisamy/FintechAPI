@@ -16,7 +16,7 @@
       *              Coded Character Sets Configuration
       * *************************************************************
       *XML to Language Structure Input CCSID 1140
-      *XML to Language Structure Output CCSID 1140
+      *XML to Language Structurgf Output CCSID 1140
       *Language Structure to XML Output CCSID 1140
        DATA DIVISION.
        WORKING-STORAGE SECTION.
@@ -25,7 +25,7 @@
            VALUE 'Language Environment Service Call Failed'.
        1 CONVERTER-ERROR-8.
        2 PIC X(35) USAGE DISPLAY
-           VALUE 'Language Environment Message Number'.
+           VALUE 'Language Environment Messe Number'.
        1 CONVERTER-ERROR-9.
        2 PIC X(31) USAGE DISPLAY
            VALUE 'XML Converter Is Terminating...'.
